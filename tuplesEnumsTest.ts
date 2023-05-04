@@ -14,3 +14,15 @@ goodRes.pop()
 
 const responses: HTTPResponse[] = [[404, "NOT FOUND"], [200, "OK"]]
 
+enum OrderStatus {
+    PENDING,
+    SHIPPED,
+    DELIVERED,
+    RETURNED
+}
+
+const myStatus = OrderStatus.DELIVERED
+
+function isDelivered(status: OrderStatus) {
+    return status === OrderStatus.DELIVERED
+}
